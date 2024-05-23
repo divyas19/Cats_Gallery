@@ -1,7 +1,12 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from 'firebase/auth'
+import { getAuth } from 'firebase/auth';
+import firebaseApiKey from "./Components/Hide";
+
+// const f = () => (console.log(process.env.REACT_APP_FIREBASE_API_KEY + " " + firebaseApiKey));
+// f();
+
 const firebaseConfig = {
-    apiKey: "AIzaSyCLu0njjLQKsMTGY_JY4Oe5PMBa1E7x_80",
+    apiKey: firebaseApiKey,
     authDomain: "authentication-page-c5030.firebaseapp.com",
     projectId: "authentication-page-c5030",
     storageBucket: "authentication-page-c5030.appspot.com",

@@ -12,8 +12,9 @@ export function useData() {
 
 export function DataProvider({ children, condition }) {
 
+    const apiKey = process.env.REACT_APP_CATS_API
     const fetchData = async () => {
-        const result = await axios.get('https://api.thecatapi.com/v1/images/search?limit=100&api-key=live_gVwcKIvbd5GyNXKcvMbNuagf1a1eJ2wxpJ0wnwNphJI7kFUP5Pe7Lpt0KywYhfD2');
+        const result = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=100&api-key=${apiKey}`);
         return result.data;
     };
 
