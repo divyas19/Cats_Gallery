@@ -25,7 +25,7 @@ export default function Home() {
 
     const handleLogout = () => {
         logOut();
-        alert('succes logout')
+        alert('Logout Successful')
         navigate('/', { replace: true });
     };
 

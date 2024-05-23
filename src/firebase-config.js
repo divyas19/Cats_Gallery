@@ -1,9 +1,9 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from 'firebase/auth';
+import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
 import firebaseApiKey from "./Components/Hide";
 
-// const f = () => (console.log(process.env.REACT_APP_FIREBASE_API_KEY + " " + firebaseApiKey));
-// f();
+// // const f = () => (console.log(process.env.REACT_APP_FIREBASE_API_KEY + " " + firebaseApiKey));
+// // f();
 
 const firebaseConfig = {
     apiKey: firebaseApiKey,
@@ -17,4 +17,15 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+const auth = getAuth(app);
+
+setPersistence(auth, browserLocalPersistence)
+    .then(() => {
+        // Existing and future Auth states are now persisted in the current session only.
+        // ...
+    })
+    .catch((error) => {
+        console.error("Error setting persistence:", error);
+    });
+
+export { auth };

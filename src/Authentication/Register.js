@@ -11,10 +11,10 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (password.length < 6)
-            alert("password length must be more than 6");
+            alert("Password length must be more than 6");
         try {
             await signUp(email, password);
-            alert('success')
+            alert('Register successful')
             navigate('/login', { replace: true });
         } catch (error) {
             console.error('Failed to register:', error);
