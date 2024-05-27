@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import loading from "../Images/loading.gif"
+import loading from "../../assets/images/loading.gif"
 
 function Card({ eachData, index, isLoading, isFetching }) {
 

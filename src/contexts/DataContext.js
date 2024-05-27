@@ -1,8 +1,8 @@
 import { createContext, useContext } from "react";
 import axios from 'axios';
 import { useQuery } from "react-query";
-import loading from "../Images/loading.gif";
-import errorImage from "../Images/error.gif";
+import loading from "../assets/images/loading.gif";
+import errorImage from "../assets/images/error.gif";
 
 const DataContext = createContext();
 

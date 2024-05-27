@@ -2,14 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-import { AuthProvider } from '../Authentication/AuthProvider';
-import Register from '../Authentication/Register';
-import Login from '../Authentication/Login';
-import ProtectedRoute from '../Authentication/ProtectedRoute';
+import { AuthProvider } from '../../contexts/AuthContext';
+import Register from '../../pages/RegisterPage';
+import Login from '../../pages/LoginPage';
+import ProtectedRoute from '../../routes/ProtectedRoute';
 
-import Home from '../Components/Home';
-import MainHome from '../Components/MainHome';
-import { DataProvider } from "../Components/DataContent";
+import Home from '../../pages/HomePage';
+import MainHome from '../../pages/MainHomePage';
+import { DataProvider } from "../../contexts/DataContext";
 
 const queryClient = new QueryClient();
 

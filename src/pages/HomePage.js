@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import Card from "./Card";
-import { useData } from "./DataContent";
-import { useAuth } from '../Authentication/AuthProvider';
+import React, { useState } from 'react';
+import Card from "../components/card/Card";
+import { useData } from "../contexts/DataContext";
+import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 export default function Home() {

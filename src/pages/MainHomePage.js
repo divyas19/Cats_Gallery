@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MainPageImage from "../Images/MainPageImage.jpg";
+import mainPageImage from "../assets/images/main-page-image.jpg";
 
 export default function MainHome() {
     return (
@@ -14,11 +14,11 @@ export default function MainHome() {
             </div>
             <hr />
             <div className='flex-1 bg-slate-100 flex justify-center md:items-center '>
-                <div className='w-[80%] h-[60%] md:h-[70%] bg-white p-4 mt-[20%] md:mt-20  hover:shadow-lg transition-shadow duration-500 '>
+                <div className='w-[80%] h-[60%] sm:h-[50%] md:h-[70%] bg-white p-4 mt-[20%] md:mt-20  hover:shadow-lg transition-shadow duration-500 '>
                     <div className='h-full flex flex-col md:flex-row '>
                         <img
                             className='h-[40%] md:h-[100%]  md:w-1/3 '
-                            src={MainPageImage}
+                            src={mainPageImage}
                             alt='cat'
                         />
                         <div className='md:w-2/3 p-5 md:text-xl md:leading-relaxed flex justify-center items-center '>

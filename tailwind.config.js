@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        fontt: ['Freeman']
+        fontFreeman: ['Freeman']
       }
     },
   },

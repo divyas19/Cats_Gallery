@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from './AuthProvider';
+import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
@@ -17,16 +17,16 @@ const Register = () => {
             alert('Register successful')
             navigate('/login', { replace: true });
         } catch (error) {
+            alert('Email already in use')
             console.error('Failed to register:', error);
         }
     };
 
     return (
-        <div className=' bg-slate-100 h-screen flex justify-center items-center'>
-            <form onSubmit={handleSubmit} className="  w-[400px] h-[80%] bg-white rounded-md shadow-2xl hover:shadow-lg border-2  border-red-400  flex justify-center gap-10 items-center flex-col ">
+        <div className='h-screen overflow-y-scroll overflow-x-hidden bg-slate-100  flex justify-center items-center '>
+            <form onSubmit={handleSubmit} className="  w-[400px] h-[600px] bg-white rounded-md shadow-2xl hover:shadow-lg border-2  border-red-400  flex flex-col justify-center items-center gap-10  ">
                 <h1 className='font-bold text-4xl'>Register</h1>
-                <hr />
-                <div className="flex justify-end flex-col gap-10">
+                <div className="flex flex-col justify-end gap-10">
                     <div className="flex flex-col gap-4">
                         <label className="text-xl text-left ">Enter Email : </label>
                         <input className=" border-black border-2 rounded" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
@@ -39,7 +39,6 @@ const Register = () => {
                 <button type="submit" className='btn'>Register</button>
                 <div className="flex flex-row gap-2">
                     <div >Go back Home ? </div>
-
                     <Link to='/' className='text-blue-600 underline'>Home</Link>
                 </div>
             </form>
